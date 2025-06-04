@@ -1,5 +1,11 @@
+import lexar.LexAnalyzer;
+
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        File file = new File(args[0]); // for makefile
+
+        LexAnalyzer lexicalAnalyzer = new LexAnalyzer(file);
     }
 }

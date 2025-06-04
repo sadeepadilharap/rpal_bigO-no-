@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LexAnalzyer {
+public class LexAnalyzer {
     private ArrayList<Token> tokenList; // list of tokens as the output, input for the parser
     private BufferedReader reader;
     // keywords (reserved words) defined in the RPAL language
@@ -24,7 +24,7 @@ public class LexAnalzyer {
 
     private boolean readerClosed = false; // flag to check if the reader is closed, to avoid reading after EOF
 
-    public LexicalAnalyzer(File file) {
+    public LexAnalyzer(File file) {
         this.tokenList = new ArrayList<Token>();
         try {
             this.reader = new BufferedReader(new FileReader(file));
