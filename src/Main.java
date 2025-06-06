@@ -1,5 +1,8 @@
 import lexar.LexAnalyzer;
 import lexar.Token;
+import Parser.ParseTree;
+import Parser.AST;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -23,6 +26,17 @@ public class Main {
         //     System.out.println(token);
         // }
 
-        
+        // 3. Create an instance of Parser with the token list
+        ParseTree parser = new ParseTree(tokenList);
+
+        // 4. Parse the tokens to create an AST
+        AST ast = parser.buildAst();
+       // System.out.println("-----------------AST----------------------");
+        // tree.print(); 
+
+        // 5. Standerdize the AST
+        ast.standardize();
+        // System.out.println("-------------------ST----------------------");
+        // tree.print();
     }
 }
