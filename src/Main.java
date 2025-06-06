@@ -1,3 +1,5 @@
+import CS.CSNode;
+import CS.ControlStructures;
 import Lexar.LexAnalyzer;
 import Lexar.Token;
 import Parser.ParseTree;
@@ -6,6 +8,7 @@ import Parser.AST;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +41,10 @@ public class Main {
         ast.standardize();
         // System.out.println("-------------------ST----------------------");
         // tree.print();
+
+        // 6. Generate the control structures from the AST
+        ControlStructures ctrlstruct = new ControlStructures();
+        ctrlstruct.genControlStructures(ast.getRoot());
+        List<List<CSNode>> deltc_struct = ctrlstruct.getCS();
     }
 }
