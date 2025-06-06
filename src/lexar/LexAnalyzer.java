@@ -62,8 +62,8 @@ public class LexAnalyzer {
     /**
      * construct a token from the input string
      *
-     * @param nextChr
-     * @param buffer
+     * @param nextChr the next character read from the file
+     * @param buffer    the last read character that is not yet scanned
      */
     private void constructToken(String nextChr, String buffer) {
         Token token = new Token();
