@@ -1,4 +1,4 @@
-package lexar;
+package Lexar;
 
 public class Token {
     // Token is simply a pair of type and value (eg: <IDENTIFIER: function>)

@@ -1,5 +1,5 @@
-import lexar.LexAnalyzer;
-import lexar.Token;
+import Lexar.LexAnalyzer;
+import Lexar.Token;
 import Parser.ParseTree;
 import Parser.AST;
 
@@ -31,7 +31,7 @@ public class Main {
 
         // 4. Parse the tokens to create an AST
         AST ast = parser.buildAst();
-       // System.out.println("-----------------AST----------------------");
+        // System.out.println("-----------------AST----------------------");
         // tree.print(); 
 
         // 5. Standerdize the AST
