@@ -3,7 +3,7 @@ package cse_machine;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import control_structures.CSNode;
+import CS.CSNode;
 
 /**
  *

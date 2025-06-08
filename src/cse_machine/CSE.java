@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
-import control_structures.CSNode;
+import CS.CSNode;
 
 /**
  *

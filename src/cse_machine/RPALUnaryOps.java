@@ -1,6 +1,6 @@
 package cse_machine;
 
-import control_structures.CSNode;
+import CS.CSNode;
 
 /**
  *
