@@ -1,11 +1,14 @@
-import lexar.LexAnalyzer;
-import lexar.Token;
+import CS.CSNode;
+import CS.ControlStructures;
+import Lexar.LexAnalyzer;
+import Lexar.Token;
 import Parser.ParseTree;
 import Parser.AST;
 
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,12 +34,17 @@ public class Main {
 
         // 4. Parse the tokens to create an AST
         AST ast = parser.buildAst();
-       // System.out.println("-----------------AST----------------------");
+        // System.out.println("-----------------AST----------------------");
         // tree.print(); 
 
         // 5. Standerdize the AST
         ast.standardize();
         // System.out.println("-------------------ST----------------------");
         // tree.print();
+
+        // 6. Generate the control structures from the AST
+        ControlStructures ctrlstruct = new ControlStructures();
+        ctrlstruct.genControlStructures(ast.getRoot());
+        List<List<CSNode>> deltc_struct = ctrlstruct.getCS();
     }
 }

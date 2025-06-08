@@ -7,8 +7,8 @@ JAR = jar
 
 # List all the Java source files here
 CLASSES = \
-	lexar/LexicalAnalyzer.java \
-	lexar/Token.java \
+	Lexar/LexicalAnalyzer.java \
+	Lexar/Token.java \
 	Parser/AST.java \
 	Parser/LeafNode.java \
 	Parser/Node.java \
