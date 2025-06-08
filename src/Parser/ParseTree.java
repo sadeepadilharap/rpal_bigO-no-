@@ -1,7 +1,7 @@
 package Parser;
 import java.util.ArrayList;
 import java.util.Stack;
-import lexar.Token;
+import Lexar.Token;
 public class ParseTree {
     private ArrayList <Token> token_list;
     private Stack<Node> stack;
