@@ -12,7 +12,7 @@ import java.util.List;
 public class myrpal {
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Usage: java Main [-token] [-ast] [-st] <filename>");
+            System.out.println("Usage: java Main [-token] [-ast] [-sast] <filename>");
             return;
         }
 
@@ -37,7 +37,7 @@ public class myrpal {
                 case "-ast":
                     printAST = true;
                     break;
-                case "-st":
+                case "-sast":
                     printST = true;
                     break;
                 default:
