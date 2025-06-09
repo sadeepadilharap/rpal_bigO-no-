@@ -4,6 +4,7 @@ import Lexar.LexAnalyzer;
 import Lexar.Token;
 import Parser.ParseTree;
 import Parser.AST;
+import cse_machine.CSE;
 
 
 import java.io.File;
@@ -46,5 +47,10 @@ public class Main {
         ControlStructures ctrlstruct = new ControlStructures();
         ctrlstruct.genControlStructures(ast.getRoot());
         List<List<CSNode>> deltc_struct = ctrlstruct.getCS();
+
+        // 7. CSE Machine
+        CSE cse_m = new CSE(deltc_struct);
+        cse_m.runCSE();
+        System.out.println();
     }
 }

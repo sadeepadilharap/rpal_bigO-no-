@@ -14,8 +14,8 @@ CLASSES = \
 	Parser/Node.java \
 	Parser/ParseException.java \
 	Parser/ParseTree.java \
-	control_structures/ControlStructures.java \
-	control_structures/CSNode.java \
+	CS/ControlStructures.java \
+	CS/CSNode.java \
 	cse_machine/CSE.java \
 	cse_machine/EnvironmentTree.java \
 	cse_machine/EnvNode.java \
