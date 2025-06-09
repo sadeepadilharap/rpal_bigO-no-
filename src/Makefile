@@ -49,6 +49,29 @@ test: default
 	rm -f tmp.out; \
 	exit $$fail
 
+help:
+	@echo "📘 Usage Guide for RPAL System"
+	@echo ""
+	@echo "👉 To compile the project:"
+	@echo "   make"
+	@echo ""
+	@echo "👉 To clean compiled files:"
+	@echo "   make clean"
+	@echo ""
+	@echo "👉 To run tests and compare output:"
+	@echo "   make test"
+	@echo ""
+	@echo "👉 To run the RPAL interpreter manually:"
+	@echo "   java myrpal [-token] [-ast] [-st] <filename>"
+	@echo ""
+	@echo "   Example:"
+	@echo "     java myrpal -ast -st tests/add"
+	@echo ""
+	@echo "💡 Flags:"
+	@echo "   -token   Print token list from lexer"
+	@echo "   -ast     Print abstract syntax tree"
+	@echo "   -sast      Print standardized tree"
+
 
 clean:
 	find . -name "*.class" -exec $(RM) {} +
