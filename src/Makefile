@@ -52,4 +52,3 @@ test: default
 
 clean:
 	find . -name "*.class" -exec $(RM) {} +
-	find tests -name "*.out" -exec $(RM) {} +
