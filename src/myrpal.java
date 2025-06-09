@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class myrpal {
     public static void main(String[] args) {
         if (args.length < 1) {
             System.out.println("Usage: java Main [-token] [-ast] [-st] <filename>");

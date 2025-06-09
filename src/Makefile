@@ -23,11 +23,11 @@ CLASSES = \
 	cse_machine/RPALFunc.java \
 	cse_machine/RPALBinaryOps.java \
 	cse_machine/RPALUnaryOps.java \
-	Main.java
+	myrpal.java
 
 TESTS = add conc.1 fib fibSer fn1 fn2 fn3 ftst hello infix infix2 odd_even pairs1 pairs2 pairs3 picture towers vectorsum defns.1
 
-MAINCLASS = Main
+MAINCLASS = myrpal
 
 default: classes
 
