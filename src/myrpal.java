@@ -82,6 +82,7 @@ public class myrpal {
         List<List<CSNode>> deltc_struct = ctrlstruct.getCS();
 
         // 6. Run CSE Machine
+        System.out.println("Output of the above program is:");
         CSE cse_m = new CSE(deltc_struct);
         cse_m.runCSE();
         System.out.println();
