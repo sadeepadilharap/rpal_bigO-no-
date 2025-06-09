@@ -1,11 +1,11 @@
 JFLAGS = -g
 JC = javac
 JAR = jar
+
 .SUFFIXES: .java .class
 .java.class:
 	$(JC) $(JFLAGS) $*.java
 
-# List all the Java source files here
 CLASSES = \
 	Lexar/LexAnalyzer.java \
 	Lexar/Token.java \
@@ -25,19 +25,31 @@ CLASSES = \
 	cse_machine/RPALUnaryOps.java \
 	Main.java
 
-# Target for building the classes
+TESTS = add conc.1 fib fibSer fn1 fn2 fn3 ftst hello infix infix2 odd_even pairs1 pairs2 pairs3 picture towers vectorsum defns.1
+
+MAINCLASS = Main
+
 default: classes
 
-# Rule for compiling Java source files into classes
 classes: $(CLASSES:.java=.class)
 
-# first test is sample test following the naming convention in the project description
-# rest of the tests are the sample programs provided with the rpal 
-test:
+test: default
+	@echo "Running test comparisons..."
+	@fail=0; \
+	for t in $(TESTS); do \
+		echo "Comparing $$t..."; \
+		java $(MAINCLASS) tests/$$t > tmp.out; \
+		if diff -q tests/$$t.out tmp.out; then \
+			echo "✅ $$t PASSED"; \
+		else \
+			echo "❌ $$t FAILED"; \
+			fail=1; \
+		fi; \
+	done; \
+	rm -f tmp.out; \
+	exit $$fail
 
-# both build and test
-check: default test
 
-# clean all the class files
 clean:
-	find -name "*.class" -exec $(RM) {} +
+	find . -name "*.class" -exec $(RM) {} +
+	find tests -name "*.out" -exec $(RM) {} +
