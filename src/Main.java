@@ -5,7 +5,6 @@ import Lexar.Token;
 import Parser.ParseTree;
 import Parser.AST;
 import cse_machine.CSE;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +53,7 @@ public class Main {
         ArrayList<Token> tokenList = lexicalAnalyzer.getTokenList();
 
         if (printTokens) {
-            System.out.println("------------------Token List---------------------");
+            System.out.println("🔍📝 Token List 📝🔍");
             for (Token token : tokenList) {
                 System.out.println(token);
             }
@@ -65,7 +64,7 @@ public class Main {
         AST ast = parser.buildAst();
 
         if (printAST) {
-            System.out.println("-----------------AST----------------------");
+            System.out.println("🌳✨ Abstract Syntax Tree ✨🌳");
             ast.print();
         }
 
@@ -73,7 +72,7 @@ public class Main {
         ast.standardize();
 
         if (printST) {
-            System.out.println("-------------------ST----------------------");
+            System.out.println("🎯⚡ Standardized Tree ⚡🎯");
             ast.print();
         }
 
