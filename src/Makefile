@@ -7,7 +7,7 @@ JAR = jar
 
 # List all the Java source files here
 CLASSES = \
-	Lexar/LexicalAnalyzer.java \
+	Lexar/LexAnalyzer.java \
 	Lexar/Token.java \
 	Parser/AST.java \
 	Parser/LeafNode.java \
@@ -23,7 +23,7 @@ CLASSES = \
 	cse_machine/RPALFunc.java \
 	cse_machine/RPALBinaryOps.java \
 	cse_machine/RPALUnaryOps.java \
-	rpal20.java
+	Main.java
 
 # Target for building the classes
 default: classes
